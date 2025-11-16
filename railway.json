@@ -2,12 +2,6 @@
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
     "builder": "NIXPACKS",
-    "nix": {
-      "pkgs": ["nodejs_20"]
-    },
-    "environment": {
-      "NODE_VERSION": "20"
-    },
     "buildCommand": "sh -c \"pnpm install --frozen-lockfile && pnpm run build\""
   },
   "deploy": {
