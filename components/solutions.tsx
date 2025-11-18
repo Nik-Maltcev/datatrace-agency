@@ -1,28 +1,28 @@
 const playbook = [
   {
     number: "01",
-    title: "Диагностика инфополя",
-    description: "Формируем карту рисков и возможностей, оцениваем силу атакующих площадок.",
-    bullets: ["Сканируем 1200+ площадок, включая форумы и закрытые каналы", "Определяем приоритет по влиянию и срокам устранения"],
+    title: "Анализ ситуации",
+    description: "Составляем карту рисков и возможностей, оцениваем влиятельность площадок.",
+    bullets: ["Сканируем более 1200 площадок, включая форумы и закрытые каналы", "Определяем, что и в какие сроки нужно убрать"],
   },
   {
     number: "02",
-    title: "Тактика устранения",
-    description: "Подбираем комбинацию юридических, переговорных и контентных инструментов.",
-    bullets: ["Личные контакты с редакциями и блогерами из white-list базы", "Резервируем позитивный контент для замещения"],
+    title: "Устранение негатива",
+    description: "Подбираем нужную комбинацию юридических, переговорных и контентных инструментов.",
+    bullets: ["Используем личные контакты с редакциями и блогерами", "Готовим позитивный контент для замещения негатива"],
   },
   {
     number: "03",
-    title: "Закрепление позиций",
-    description: "Контролируем SERP, агрегаторы и соцмедиа, чтобы негатив не возвращался.",
-    bullets: ["Еженедельные срезы по позициям и тональности", "Автоматические сигналы при повторных публикациях"],
+    title: "Поддержка результата",
+    description: "Контролируем поисковую выдачу, агрегаторы и соцсети, чтобы негатив не вернулся.",
+    bullets: ["Еженедельно проверяем позиции и тональность", "Моментально реагируем на повторные публикации"],
   },
 ]
 
 const deliverables = [
-  { label: "SLA на удаление", value: "10-15 дн" },
+  { label: "Сроки удаления", value: "10-15 дн" },
   { label: "Каналов в работе", value: "30+" },
-  { label: "Monitoring refresh", value: "15 мин" },
+  { label: "Обновление мониторинга", value: "15 мин" },
 ]
 
 export default function Solutions() {
@@ -30,9 +30,9 @@ export default function Solutions() {
     <section id="solutions" className="border-b border-border bg-background">
       <div className="container mx-auto space-y-12 px-6 py-20 lg:space-y-16 lg:py-28">
         <div className="space-y-4">
-          <p className="text-xs font-semibold uppercase tracking-normal text-foreground/60">Playbook</p>
+          <p className="text-xs font-semibold uppercase tracking-normal text-foreground/60">Как мы решаем задачи</p>
           <h2 className="text-3xl font-black leading-tight text-foreground sm:text-4xl lg:text-5xl">
-            Каждому кейсу — собственная стратегия давления на площадки и наращивания позитива.
+            Для каждого случая — своя стратегия: убираем негатив и создаём позитивный фон.
           </h2>
         </div>
 
@@ -61,11 +61,11 @@ export default function Solutions() {
 
           <div className="space-y-8">
             <div className="rounded-[32px] border border-border/70 bg-foreground px-8 py-10 text-background shadow-[0_25px_65px_rgba(15,15,15,0.12)]">
-              <p className="text-xs uppercase tracking-normal text-background/60">Premium формат</p>
-              <h3 className="mt-4 text-3xl font-black">Dedicated team</h3>
+              <p className="text-xs uppercase tracking-normal text-background/60">Ваша команда</p>
+              <h3 className="mt-4 text-3xl font-black">Личная команда</h3>
               <p className="mt-4 text-sm text-background/80">
-                Вы получаете личный war-room: team lead, юрист, медиатор и контент-группа. Все коммуникации фиксируются в
-                закрытом канале, статус обновляется ежедневно.
+                Вы получаете личную команду: руководитель, юрист, переговорщик и редакция. Общаемся в закрытом чате,
+                статус обновляем каждый день.
               </p>
               <div className="mt-8 grid gap-6 sm:grid-cols-3">
                 {deliverables.map((item) => (
@@ -78,19 +78,19 @@ export default function Solutions() {
             </div>
 
             <div className="rounded-[32px] border border-border/70 bg-background/80 p-8 shadow-[0_15px_40px_rgba(15,15,15,0.06)]">
-              <p className="text-xs uppercase tracking-normal text-foreground/60">Что входит</p>
+              <p className="text-xs uppercase tracking-normal text-foreground/60">Что входит в услугу</p>
               <ul className="mt-6 space-y-4 text-sm text-foreground/80">
                 <li className="flex gap-3">
                   <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                  Мониторинг SEO, соцсетей, review-площадок, госреестров и даркнета
+                  Мониторинг поисковиков, соцсетей, сайтов-отзовиков и госреестров
                 </li>
                 <li className="flex gap-3">
                   <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                  Правовой суппорт: претензии, медиативные договорённости, фиксация ущерба
+                  Юридическая поддержка: претензии, переговоры, фиксация ущерба
                 </li>
                 <li className="flex gap-3">
                   <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                  Производство и публикации поддерживающего контента в управляемом пуле медиа
+                  Создание и размещение позитивных материалов в проверенных СМИ
                 </li>
               </ul>
             </div>
