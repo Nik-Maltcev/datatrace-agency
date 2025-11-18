@@ -33,7 +33,7 @@ export default function FAQ() {
     <section id="faq" className="border-b border-border bg-background">
       <div className="container mx-auto grid gap-12 px-6 py-20 lg:grid-cols-[0.9fr,1.1fr] lg:py-28">
         <div className="space-y-6 rounded-[32px] border border-border/70 bg-background/80 p-8 shadow-[0_20px_60px_rgba(15,15,15,0.08)]">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-foreground/60">FAQ</p>
+          <p className="text-xs font-semibold uppercase tracking-normal text-foreground/60">FAQ</p>
           <h2 className="text-3xl font-black leading-tight text-foreground">
             Работайте с нами так, будто у вас есть внутренняя PR-команда уровня Tier 1.
           </h2>
@@ -42,7 +42,7 @@ export default function FAQ() {
             стороны всё закрываем договором, NDA и допсоглашениями.
           </p>
           <div className="rounded-2xl border border-border/70 bg-foreground px-6 py-5 text-background">
-            <p className="text-[10px] uppercase tracking-[0.35em] text-background/60">Next step</p>
+            <p className="text-[10px] uppercase tracking-normal text-background/60">Next step</p>
             <p className="mt-2 text-base">Проведём аудит за 48 часов и покажем, что реально удалить.</p>
           </div>
         </div>

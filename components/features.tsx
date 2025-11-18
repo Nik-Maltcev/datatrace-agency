@@ -41,7 +41,7 @@ export default function Features() {
       <div className="container mx-auto grid gap-12 px-6 py-20 lg:grid-cols-[1.1fr,0.9fr] lg:py-28">
         <div className="space-y-10">
           <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-foreground/60">
+            <p className="text-xs font-semibold uppercase tracking-normal text-foreground/60">
               Полный цикл DataTrace
             </p>
             <h2 className="text-3xl font-black leading-tight text-foreground sm:text-4xl lg:text-5xl">
@@ -54,7 +54,7 @@ export default function Features() {
           </div>
 
           <div className="rounded-3xl border border-border/70 bg-background/80 p-8 shadow-[0_25px_70px_rgba(15,15,15,0.08)]">
-            <p className="text-xs uppercase tracking-[0.35em] text-foreground/60">Премиальный контроль</p>
+            <p className="text-xs uppercase tracking-normal text-foreground/60">Премиальный контроль</p>
             <ul className="mt-6 space-y-4">
               {checklist.map((item) => (
                 <li key={item} className="flex gap-4 text-sm text-foreground/80">
@@ -79,7 +79,7 @@ export default function Features() {
                 <h3 className="text-lg font-bold text-foreground">{pillar.title}</h3>
               </div>
               <p className="mt-5 text-sm text-foreground/75">{pillar.description}</p>
-              <p className="mt-6 text-xs uppercase tracking-[0.35em] text-foreground/60">{pillar.metric}</p>
+              <p className="mt-6 text-xs uppercase tracking-normal text-foreground/60">{pillar.metric}</p>
             </div>
           ))}
         </div>

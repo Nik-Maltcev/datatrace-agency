@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="rounded-[40px] border border-border/70 bg-foreground px-8 py-10 text-background shadow-[0_30px_80px_rgba(15,15,15,0.12)]">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <p className="text-xs uppercase tracking-[0.4em] text-background/60">Готовы включиться</p>
+              <p className="text-xs uppercase tracking-normal text-background/60">Готовы включиться</p>
               <h3 className="mt-3 text-3xl font-black leading-tight">Получите аудит за 48 часов и план зачистки.</h3>
               <p className="mt-3 text-sm text-background/80">
                 Мы свяжемся через защищённый канал, подписываем NDA до передачи данных.
@@ -17,13 +17,13 @@ export default function Footer() {
             <div className="flex flex-col gap-4 sm:flex-row">
               <a
                 href="mailto:hello@datatrace.agency"
-                className="rounded-full border border-background/40 px-8 py-4 text-center text-[11px] font-black uppercase tracking-[0.3em] text-background hover:border-background"
+                className="rounded-full border border-background/40 px-8 py-4 text-center text-[11px] font-black uppercase tracking-normal text-background hover:border-background"
               >
                 Написать на почту
               </a>
               <a
                 href="https://t.me/"
-                className="rounded-full bg-background px-8 py-4 text-center text-[11px] font-black uppercase tracking-[0.3em] text-foreground"
+                className="rounded-full bg-background px-8 py-4 text-center text-[11px] font-black uppercase tracking-normal text-foreground"
               >
                 Telegram‑связь
               </a>
@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-foreground/60">Навигация</p>
+            <p className="text-xs font-semibold uppercase tracking-normal text-foreground/60">Навигация</p>
             <div className="mt-4 space-y-3 text-sm text-foreground/70">
               <Link href="#solutions" className="block hover:text-foreground">
                 Решения
@@ -57,7 +57,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-foreground/60">Сервисы</p>
+            <p className="text-xs font-semibold uppercase tracking-normal text-foreground/60">Сервисы</p>
             <div className="mt-4 space-y-3 text-sm text-foreground/70">
               <span>Удаление и замещение в SERP</span>
               <span>Правовой суппорт</span>
@@ -66,7 +66,7 @@ export default function Footer() {
           </div>
 
           <div className="space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-foreground/60">Контакты</p>
+            <p className="text-xs font-semibold uppercase tracking-normal text-foreground/60">Контакты</p>
             <div className="flex items-center gap-2 text-sm text-foreground/80">
               <Mail className="h-4 w-4" />
               <a href="mailto:hello@datatrace.agency" className="hover:text-primary">

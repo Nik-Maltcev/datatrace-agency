@@ -33,7 +33,7 @@ export default function Hero() {
       <div className="absolute inset-x-0 top-0 h-[420px] bg-[radial-gradient(circle_at_top,_rgba(10,20,10,0.12),_transparent_70%)]" />
       <div className="container mx-auto grid gap-16 px-6 py-20 lg:grid-cols-[1.05fr,0.95fr] lg:py-28">
         <div className="space-y-10">
-          <div className="inline-flex items-center gap-3 rounded-full border border-border/60 bg-background/80 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.35em] text-foreground/70">
+          <div className="inline-flex items-center gap-3 rounded-full border border-border/60 bg-background/80 px-4 py-2 text-[11px] font-semibold uppercase tracking-normal text-foreground/70">
             <Sparkles className="h-4 w-4 text-primary" />
             Кибер PR-команда
           </div>
@@ -50,17 +50,17 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <button className="inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-4 text-[11px] font-black uppercase tracking-[0.35em] text-background transition hover:-translate-y-0.5">
+            <button className="inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-4 text-[11px] font-black uppercase tracking-normal text-background transition hover:-translate-y-0.5">
               Получить стратегию
               <ArrowUpRight className="h-4 w-4" />
             </button>
-            <button className="inline-flex items-center rounded-full border border-foreground/30 px-7 py-4 text-[11px] font-black uppercase tracking-[0.35em] text-foreground transition hover:border-foreground/70">
+            <button className="inline-flex items-center rounded-full border border-foreground/30 px-7 py-4 text-[11px] font-black uppercase tracking-normal text-foreground transition hover:border-foreground/70">
               Смотреть портфель
             </button>
           </div>
 
           <div className="space-y-5 rounded-3xl border border-border/60 bg-background/80 p-8 shadow-[0_25px_80px_rgba(15,15,15,0.08)]">
-            <p className="text-sm font-semibold uppercase tracking-[0.4em] text-foreground/60">почему выбирают</p>
+            <p className="text-sm font-semibold uppercase tracking-normal text-foreground/60">почему выбирают</p>
             <ul className="space-y-4">
               {highlights.map((highlight) => (
                 <li key={highlight} className="flex gap-4 text-sm text-foreground/80">
@@ -75,12 +75,12 @@ export default function Hero() {
             {stats.map((stat) => (
               <div key={stat.label}>
                 <p className="text-3xl font-black text-foreground">{stat.value}</p>
-                <p className="text-xs uppercase tracking-[0.35em] text-foreground/60">{stat.label}</p>
+                <p className="text-xs uppercase tracking-normal text-foreground/60">{stat.label}</p>
               </div>
             ))}
           </div>
 
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-4 text-xs uppercase tracking-[0.35em] text-foreground/50">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-4 text-xs uppercase tracking-normal text-foreground/50">
             <span className="text-foreground/80">доверяют: </span>
             <span>blockchain fond</span>
             <span>legal hub</span>
@@ -93,10 +93,10 @@ export default function Hero() {
           <div className="relative z-10 rounded-[32px] border border-border/80 bg-background/90 p-10 shadow-[0_25px_65px_rgba(15,15,15,0.1)]">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-xs uppercase tracking-[0.4em] text-foreground/60">Контур</p>
+                <p className="text-xs uppercase tracking-normal text-foreground/60">Контур</p>
                 <h3 className="text-2xl font-black text-foreground">LIVE мониторинг</h3>
               </div>
-              <span className="rounded-full border border-foreground/20 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-foreground/70">
+              <span className="rounded-full border border-foreground/20 px-4 py-2 text-[11px] font-semibold uppercase tracking-normal text-foreground/70">
                 24/7
               </span>
             </div>
@@ -112,13 +112,13 @@ export default function Hero() {
                     <ArrowUpRight className="h-4 w-4 text-primary" />
                   </div>
                   <p className="mt-3 text-3xl font-black text-foreground">{item.value}</p>
-                  <p className="text-xs uppercase tracking-[0.35em] text-foreground/60">{item.caption}</p>
+                  <p className="text-xs uppercase tracking-normal text-foreground/60">{item.caption}</p>
                 </div>
               ))}
             </div>
 
             <div className="mt-10 space-y-4 rounded-2xl border border-border/60 bg-foreground px-6 py-5 text-background">
-              <p className="text-xs uppercase tracking-[0.4em] text-background/70">Статус</p>
+              <p className="text-xs uppercase tracking-normal text-background/70">Статус</p>
               <p className="text-2xl font-black">Восстановление имиджа CEO</p>
               <div className="flex items-center gap-2 text-sm text-background/70">
                 <span className="h-2.5 w-2.5 rounded-full bg-primary" />

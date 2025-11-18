@@ -49,7 +49,7 @@ export default function Pricing() {
     <section id="pricing" className="border-b border-border bg-background">
       <div className="container mx-auto space-y-12 px-6 py-20 lg:space-y-16 lg:py-28">
         <div className="space-y-4 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-foreground/60">Тарифы</p>
+          <p className="text-xs font-semibold uppercase tracking-normal text-foreground/60">Тарифы</p>
           <h2 className="text-3xl font-black leading-tight text-foreground sm:text-4xl lg:text-5xl">
             Стоимость зависит от масштаба задачи и количества площадок.
           </h2>
@@ -68,7 +68,7 @@ export default function Pricing() {
             >
               <div className="space-y-3">
                 <p
-                  className={`text-xs uppercase tracking-[0.35em] ${
+                  className={`text-xs uppercase tracking-normal ${
                     plan.highlighted ? "text-background/70" : "text-foreground/60"
                   }`}
                 >
@@ -91,7 +91,7 @@ export default function Pricing() {
               </div>
 
               <button
-                className={`mt-10 rounded-full border px-6 py-3 text-[11px] font-black uppercase tracking-[0.35em] transition ${
+                className={`mt-10 rounded-full border px-6 py-3 text-[11px] font-black uppercase tracking-normal transition ${
                   plan.highlighted
                     ? "border-background/40 text-background hover:border-background"
                     : "border-foreground/40 text-foreground hover:border-foreground"
