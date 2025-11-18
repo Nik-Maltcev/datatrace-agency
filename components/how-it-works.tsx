@@ -1,97 +1,114 @@
 "use client"
 
-import { Globe, Search, MessageSquare, Shield, Check } from "lucide-react"
+import { Check, Globe, MessageSquare, Search, Shield } from "lucide-react"
+
+const sources = [
+  {
+    icon: <Search className="h-5 w-5 text-primary" />,
+    name: "Поисковая выдача",
+    description: "Google, Yandex, Yahoo, Bing, DuckDuckGo",
+  },
+  {
+    icon: <MessageSquare className="h-5 w-5 text-primary" />,
+    name: "Соцмедиа и мессенджеры",
+    description: "VK, Telegram, X, Instagram, TikTok",
+  },
+  {
+    icon: <Globe className="h-5 w-5 text-primary" />,
+    name: "Рейтинги и каталоги",
+    description: "Avvo, Tripadvisor, 2Gis, Yell, Flamp",
+  },
+  {
+    icon: <Shield className="h-5 w-5 text-primary" />,
+    name: "Правовые и теневые базы",
+    description: "Arbitr, Kartoteka, даркнет-форумы, paste-сервисы",
+  },
+]
+
+const actions = [
+  {
+    step: "01",
+    title: "Сбор и форензика",
+    description:
+      "Сканируем тональность, посещаемость, трафиковый потенциал, фиксируем юридические доказательства и финансовый ущерб.",
+  },
+  {
+    step: "02",
+    title: "Стратегия давления",
+    description:
+      "Выбираем инструменты: юридическое воздействие, переговоры, медиабаинг, SEO и продакшн новых материалов.",
+  },
+  {
+    step: "03",
+    title: "Исполнение и эскалация",
+    description:
+      "Запускаем кампанию, подключаем личные контакты, держим ежедневный статус-контроль и повышаем давление, если нужно.",
+  },
+  {
+    step: "04",
+    title: "Контроль и отчёты",
+    description:
+      "Фиксируем результаты, закрепляем позитив, обеспечиваем мониторинг и создаём отчёты для руководства и юристов.",
+  },
+]
 
 export default function HowItWorks() {
-  const sources = [
-    {
-      icon: <Search className="w-6 h-6 text-primary" />,
-      title: "Поисковые системы",
-      description: "Google, Yandex и другие поисковики.",
-    },
-    {
-      icon: <MessageSquare className="w-6 h-6 text-primary" />,
-      title: "Социальные сети",
-      description: "Facebook, VK, Instagram, TikTok и другие.",
-    },
-    {
-      icon: <Globe className="w-6 h-6 text-primary" />,
-      title: "Сайты отзывов",
-      description: "Яндекс.Карты, 2Gis, Avvo, Trustpilot и другие.",
-    },
-    {
-      icon: <Shield className="w-6 h-6 text-primary" />,
-      title: "Новостные сайты и форумы",
-      description: "Публикации на новостных порталах и блогах.",
-    },
-  ]
-
-  const actions = [
-    {
-      step: "01",
-      title: "Анализ и стратегия",
-      description: "Определяем источники и масштаб проблемы, разрабатываем план действий.",
-    },
-    {
-      step: "02",
-      title: "Процесс удаления",
-      description: "Связываемся с владельцами сайтов и используем юридические методы.",
-    },
-    {
-      step: "03",
-      title: "Вытеснение негатива",
-      description: "Создаем и продвигаем позитивный контент для улучшения репутации.",
-    },
-    {
-      step: "04",
-      title: "Мониторинг и отчетность",
-      description: "Отслеживаем результаты и предоставляем подробные отчеты о проделанной работе.",
-    },
-  ]
-
   return (
-    <section className="py-16 lg:py-24 px-6 lg:px-8 border-b border-border bg-background">
-      <div className="container mx-auto space-y-20">
-        {/* Section Title */}
-        <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-block px-4 py-2 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest rounded-full mb-4">
-            Как мы работаем
-          </div>
-          <h2 className="text-4xl lg:text-5xl font-black text-foreground leading-tight text-balance">
-            Прозрачный процесс, реальные результаты
+    <section className="border-b border-border bg-background">
+      <div className="container mx-auto space-y-16 px-6 py-20 lg:py-28">
+        <div className="text-center space-y-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-foreground/60">Как это работает</p>
+          <h2 className="text-3xl font-black leading-tight text-foreground sm:text-4xl lg:text-5xl">
+            Технологический мониторинг + переговорная мощь + юридический рычаг.
           </h2>
-          <p className="text-lg mt-4 text-foreground/70">
-            Мы следуем проверенному четырехэтапному процессу, чтобы гарантировать эффективное и легитимное решение
-            ваших репутационных проблем.
+          <p className="mx-auto max-w-3xl text-base text-foreground/70 lg:text-lg">
+            Мы комбинируем инструменты цифрового форензика, правовой практики и медиапродюсирования. Поэтому получаем
+            прогнозируемые результаты даже на сложных площадках.
           </p>
         </div>
 
-        {/* Actions Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px border border-border rounded-xl overflow-hidden">
-          {actions.map((item, index) => (
-            <div key={index} className="bg-background/50 p-8 space-y-4">
-              <div className="text-4xl font-black text-primary/20">{item.step}</div>
-              <h3 className="text-xl font-bold text-foreground">{item.title}</h3>
-              <p className="text-foreground/70">{item.description}</p>
+        <div className="grid gap-10 lg:grid-cols-[0.9fr,1.1fr]">
+          <div className="space-y-6 rounded-[32px] border border-border/70 bg-background/80 p-8 shadow-[0_20px_60px_rgba(15,15,15,0.08)]">
+            <p className="text-xs uppercase tracking-[0.35em] text-foreground/60">Смотрим шире всех</p>
+            <div className="grid gap-6 sm:grid-cols-2">
+              {sources.map((source) => (
+                <div key={source.name} className="rounded-2xl border border-border/70 bg-background/70 p-6">
+                  <div className="flex items-center gap-3 text-sm font-semibold text-foreground">
+                    <div className="rounded-full border border-border/80 p-2">{source.icon}</div>
+                    {source.name}
+                  </div>
+                  <p className="mt-3 text-xs uppercase tracking-[0.35em] text-foreground/60">{source.description}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
 
-        {/* Sources Grid */}
-        <div>
-          <h3 className="text-2xl font-bold text-center text-foreground mb-8">Работаем со всеми источниками</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {sources.map((item, index) => (
-              <div key={index} className="flex flex-col items-center text-center space-y-3">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                  {item.icon}
+          <div className="rounded-[32px] border border-border/70 bg-background/80 p-8 shadow-[0_30px_80px_rgba(15,15,15,0.09)]">
+            <p className="text-xs uppercase tracking-[0.35em] text-foreground/60">Путь клиента</p>
+            <div className="mt-8 space-y-6">
+              {actions.map((action, index) => (
+                <div key={action.step} className="relative rounded-2xl border border-border/70 bg-background/60 p-6">
+                  {index !== actions.length - 1 && (
+                    <span className="absolute left-8 top-full h-6 w-px bg-border/80" aria-hidden="true" />
+                  )}
+                  <div className="flex items-center justify-between">
+                    <span className="text-2xl font-black text-foreground/20">{action.step}</span>
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.35em] text-foreground/60">
+                      SLA контролируем
+                    </span>
+                  </div>
+                  <h3 className="mt-4 text-lg font-bold text-foreground">{action.title}</h3>
+                  <p className="mt-2 text-sm text-foreground/75">{action.description}</p>
                 </div>
-                <div>
-                  <h4 className="font-bold text-foreground">{item.title}</h4>
-                  <p className="text-sm text-foreground/60">{item.description}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            <div className="mt-8 rounded-2xl border border-border/70 bg-foreground px-6 py-5 text-background">
+              <p className="text-xs uppercase tracking-[0.35em] text-background/60">Отчётность</p>
+              <p className="mt-3 flex items-center gap-3 text-sm text-background/80">
+                <Check className="h-4 w-4 text-primary" />
+                Дашборд с KPI по позициям, удалённым материалам и новым угрозам
+              </p>
+            </div>
           </div>
         </div>
       </div>
