@@ -33,7 +33,7 @@ export default function CaseStudies() {
     <section id="cases" className="border-b border-border bg-background">
       <div className="container mx-auto space-y-12 px-6 py-20 lg:space-y-16 lg:py-28">
         <div className="space-y-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-foreground/60">Кейсы</p>
+          <p className="text-xs font-semibold uppercase tracking-normal text-foreground/60">Кейсы</p>
           <h2 className="text-3xl font-black leading-tight text-foreground sm:text-4xl lg:text-5xl">
             Работаем в режимах кризиса, слияния, личного ребрендинга.
           </h2>
@@ -48,7 +48,7 @@ export default function CaseStudies() {
               key={item.title}
               className="flex flex-col rounded-[32px] border border-border/80 bg-background/85 p-8 shadow-[0_30px_80px_rgba(15,15,15,0.09)]"
             >
-              <div className="flex items-center justify-between text-xs uppercase tracking-[0.35em] text-foreground/60">
+              <div className="flex items-center justify-between text-xs uppercase tracking-normal text-foreground/60">
                 {item.industry}
                 <span className="rounded-full border border-border/70 px-4 py-1 text-[10px]">{item.timeline}</span>
               </div>
@@ -56,7 +56,7 @@ export default function CaseStudies() {
               <p className="mt-4 text-sm text-foreground/75 flex-1">{item.description}</p>
 
               <div className="mt-6 space-y-4 rounded-2xl border border-border/60 bg-background/70 p-5">
-                <p className="text-[10px] uppercase tracking-[0.35em] text-foreground/60">Ключевые площадки</p>
+                <p className="text-[10px] uppercase tracking-normal text-foreground/60">Ключевые площадки</p>
                 <div className="space-y-1 text-sm text-foreground/70">
                   {item.sources.map((source) => (
                     <p key={source}>{source}</p>
@@ -65,7 +65,7 @@ export default function CaseStudies() {
               </div>
 
               <div className="mt-6 rounded-2xl border border-border/60 bg-foreground px-5 py-4 text-background">
-                <p className="text-[10px] uppercase tracking-[0.35em] text-background/60">Результат</p>
+                <p className="text-[10px] uppercase tracking-normal text-background/60">Результат</p>
                 <p className="mt-2 text-sm text-background/90">{item.result}</p>
               </div>
             </div>

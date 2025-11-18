@@ -30,7 +30,7 @@ export default function RemovalStages() {
     <section id="process" className="border-b border-border bg-background">
       <div className="container mx-auto space-y-12 px-6 py-20 lg:space-y-16 lg:py-28">
         <div className="max-w-4xl space-y-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-foreground/60">Процесс</p>
+          <p className="text-xs font-semibold uppercase tracking-normal text-foreground/60">Процесс</p>
           <h2 className="text-3xl font-black leading-tight text-foreground sm:text-4xl lg:text-5xl">
             Чёткий маршрут из трёх фаз. Каждая завершается пакетом артефактов и обновлённой выдачей.
           </h2>
@@ -43,14 +43,14 @@ export default function RemovalStages() {
               className="relative rounded-[28px] border border-border/80 bg-background/80 p-8 shadow-[0_20px_60px_rgba(15,15,15,0.08)]"
             >
               <div className="flex items-center justify-between">
-                <p className="text-xs uppercase tracking-[0.35em] text-foreground/60">{stage.step}</p>
-                <span className="rounded-full border border-border/80 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.35em] text-foreground/70">
+                <p className="text-xs uppercase tracking-normal text-foreground/60">{stage.step}</p>
+                <span className="rounded-full border border-border/80 px-4 py-1 text-[11px] font-semibold uppercase tracking-normal text-foreground/70">
                   {stage.duration}
                 </span>
               </div>
               <h3 className="mt-6 text-xl font-bold text-foreground">{stage.title}</h3>
               <p className="mt-4 text-sm text-foreground/75">{stage.description}</p>
-              <p className="mt-6 text-xs uppercase tracking-[0.35em] text-foreground/60">{stage.focus}</p>
+              <p className="mt-6 text-xs uppercase tracking-normal text-foreground/60">{stage.focus}</p>
             </div>
           ))}
         </div>

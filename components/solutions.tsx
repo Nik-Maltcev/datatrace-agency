@@ -30,7 +30,7 @@ export default function Solutions() {
     <section id="solutions" className="border-b border-border bg-background">
       <div className="container mx-auto space-y-12 px-6 py-20 lg:space-y-16 lg:py-28">
         <div className="space-y-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-foreground/60">Playbook</p>
+          <p className="text-xs font-semibold uppercase tracking-normal text-foreground/60">Playbook</p>
           <h2 className="text-3xl font-black leading-tight text-foreground sm:text-4xl lg:text-5xl">
             Каждому кейсу — собственная стратегия давления на площадки и наращивания позитива.
           </h2>
@@ -61,7 +61,7 @@ export default function Solutions() {
 
           <div className="space-y-8">
             <div className="rounded-[32px] border border-border/70 bg-foreground px-8 py-10 text-background shadow-[0_25px_65px_rgba(15,15,15,0.12)]">
-              <p className="text-xs uppercase tracking-[0.35em] text-background/60">Premium формат</p>
+              <p className="text-xs uppercase tracking-normal text-background/60">Premium формат</p>
               <h3 className="mt-4 text-3xl font-black">Dedicated team</h3>
               <p className="mt-4 text-sm text-background/80">
                 Вы получаете личный war-room: team lead, юрист, медиатор и контент-группа. Все коммуникации фиксируются в
@@ -71,14 +71,14 @@ export default function Solutions() {
                 {deliverables.map((item) => (
                   <div key={item.label}>
                     <p className="text-2xl font-black">{item.value}</p>
-                    <p className="text-[10px] uppercase tracking-[0.4em] text-background/60">{item.label}</p>
+                    <p className="text-[10px] uppercase tracking-normal text-background/60">{item.label}</p>
                   </div>
                 ))}
               </div>
             </div>
 
             <div className="rounded-[32px] border border-border/70 bg-background/80 p-8 shadow-[0_15px_40px_rgba(15,15,15,0.06)]">
-              <p className="text-xs uppercase tracking-[0.35em] text-foreground/60">Что входит</p>
+              <p className="text-xs uppercase tracking-normal text-foreground/60">Что входит</p>
               <ul className="mt-6 space-y-4 text-sm text-foreground/80">
                 <li className="flex gap-3">
                   <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />

@@ -57,7 +57,7 @@ export default function HowItWorks() {
     <section className="border-b border-border bg-background">
       <div className="container mx-auto space-y-16 px-6 py-20 lg:py-28">
         <div className="text-center space-y-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-foreground/60">Как это работает</p>
+          <p className="text-xs font-semibold uppercase tracking-normal text-foreground/60">Как это работает</p>
           <h2 className="text-3xl font-black leading-tight text-foreground sm:text-4xl lg:text-5xl">
             Технологический мониторинг + переговорная мощь + юридический рычаг.
           </h2>
@@ -69,7 +69,7 @@ export default function HowItWorks() {
 
         <div className="grid gap-10 lg:grid-cols-[0.9fr,1.1fr]">
           <div className="space-y-6 rounded-[32px] border border-border/70 bg-background/80 p-8 shadow-[0_20px_60px_rgba(15,15,15,0.08)]">
-            <p className="text-xs uppercase tracking-[0.35em] text-foreground/60">Смотрим шире всех</p>
+            <p className="text-xs uppercase tracking-normal text-foreground/60">Смотрим шире всех</p>
             <div className="grid gap-6 sm:grid-cols-2">
               {sources.map((source) => (
                 <div key={source.name} className="rounded-2xl border border-border/70 bg-background/70 p-6">
@@ -77,14 +77,14 @@ export default function HowItWorks() {
                     <div className="rounded-full border border-border/80 p-2">{source.icon}</div>
                     {source.name}
                   </div>
-                  <p className="mt-3 text-xs uppercase tracking-[0.35em] text-foreground/60">{source.description}</p>
+                  <p className="mt-3 text-xs uppercase tracking-normal text-foreground/60">{source.description}</p>
                 </div>
               ))}
             </div>
           </div>
 
           <div className="rounded-[32px] border border-border/70 bg-background/80 p-8 shadow-[0_30px_80px_rgba(15,15,15,0.09)]">
-            <p className="text-xs uppercase tracking-[0.35em] text-foreground/60">Путь клиента</p>
+            <p className="text-xs uppercase tracking-normal text-foreground/60">Путь клиента</p>
             <div className="mt-8 space-y-6">
               {actions.map((action, index) => (
                 <div key={action.step} className="relative rounded-2xl border border-border/70 bg-background/60 p-6">
@@ -93,7 +93,7 @@ export default function HowItWorks() {
                   )}
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-black text-foreground/20">{action.step}</span>
-                    <span className="text-[11px] font-semibold uppercase tracking-[0.35em] text-foreground/60">
+                    <span className="text-[11px] font-semibold uppercase tracking-normal text-foreground/60">
                       SLA контролируем
                     </span>
                   </div>
@@ -103,7 +103,7 @@ export default function HowItWorks() {
               ))}
             </div>
             <div className="mt-8 rounded-2xl border border-border/70 bg-foreground px-6 py-5 text-background">
-              <p className="text-xs uppercase tracking-[0.35em] text-background/60">Отчётность</p>
+              <p className="text-xs uppercase tracking-normal text-background/60">Отчётность</p>
               <p className="mt-3 flex items-center gap-3 text-sm text-background/80">
                 <Check className="h-4 w-4 text-primary" />
                 Дашборд с KPI по позициям, удалённым материалам и новым угрозам
