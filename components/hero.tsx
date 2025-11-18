@@ -3,27 +3,27 @@
 import { ArrowUpRight, Check, Sparkles } from "lucide-react"
 
 const highlights = [
-  "Удаляем клевету, теневые публикации и токсичные дубликаты до 1-й и 2-й страниц выдачи",
-  "Фиксируем доказательную базу и ведём переговоры напрямую с площадками и редакциями",
-  "Ставим на поток выдачу «белых» материалов, чтобы занять весь экран контролируемым позитивом",
+  "Удаляем клевету и негативные отзывы из поисковой выдачи",
+  "Собираем доказательства и договариваемся с площадками",
+  "Создаём позитивные материалы, чтобы вытеснить негатив",
 ]
 
 const stats = [
-  { label: "упоминаний закрыто", value: "780+" },
-  { label: "скорость реагирования", value: "<4 ч" },
-  { label: "retain клиентов", value: "93%" },
+  { label: "упоминаний удалено", value: "780+" },
+  { label: "скорость реакции", value: "<4 ч" },
+  { label: "клиентов остаются с нами", value: "93%" },
 ]
 
 const insightCards = [
   {
-    title: "Panic removal",
+    title: "Срочное удаление",
     value: "12 ч",
-    caption: "жёсткий SLA на удаление при кризисных кейсах",
+    caption: "быстрое удаление в кризисных ситуациях",
   },
   {
-    title: "Digital due diligence",
+    title: "Проверка репутации",
     value: "360°",
-    caption: "пакетное обследование до продажи компании или личного выхода в публичность",
+    caption: "полный аудит перед продажей компании или выходом в публичное поле",
   },
 ]
 
@@ -35,32 +35,31 @@ export default function Hero() {
         <div className="space-y-10">
           <div className="inline-flex items-center gap-3 rounded-full border border-border/60 bg-background/80 px-4 py-2 text-[11px] font-semibold uppercase tracking-normal text-foreground/70">
             <Sparkles className="h-4 w-4 text-primary" />
-            Кибер PR-команда
+            Команда по управлению репутацией
           </div>
 
           <div className="space-y-6">
             <h1 className="text-4xl leading-tight text-foreground sm:text-5xl lg:text-6xl lg:leading-[1.05] font-black tracking-tight">
-              Управляем цифровой репутацией людей и брендов как in‑house подразделение за вас.
+              Защищаем вашу репутацию в интернете
             </h1>
             <p className="max-w-2xl text-lg text-foreground/75 lg:text-xl">
-              DataTrace — агентство premium-сегмента. Мы берём под контроль поисковую выдачу, соцсети, закрытые форумы и
-              юридические площадки, чтобы бренд выглядел на 10/10 даже во время атак конкурентов или инфоповодов из
-              прошлого.
+              DataTrace помогает контролировать поисковую выдачу, соцсети и другие площадки, чтобы ваша репутация
+              оставалась безупречной даже при атаках конкурентов.
             </p>
           </div>
 
           <div className="flex flex-wrap gap-4">
             <button className="inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-4 text-[11px] font-black uppercase tracking-normal text-background transition hover:-translate-y-0.5">
-              Получить стратегию
+              Обсудить проект
               <ArrowUpRight className="h-4 w-4" />
             </button>
             <button className="inline-flex items-center rounded-full border border-foreground/30 px-7 py-4 text-[11px] font-black uppercase tracking-normal text-foreground transition hover:border-foreground/70">
-              Смотреть портфель
+              Наши кейсы
             </button>
           </div>
 
           <div className="space-y-5 rounded-3xl border border-border/60 bg-background/80 p-8 shadow-[0_25px_80px_rgba(15,15,15,0.08)]">
-            <p className="text-sm font-semibold uppercase tracking-normal text-foreground/60">почему выбирают</p>
+            <p className="text-sm font-semibold uppercase tracking-normal text-foreground/60">Что мы делаем</p>
             <ul className="space-y-4">
               {highlights.map((highlight) => (
                 <li key={highlight} className="flex gap-4 text-sm text-foreground/80">
@@ -81,11 +80,11 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-wrap items-center gap-x-6 gap-y-4 text-xs uppercase tracking-normal text-foreground/50">
-            <span className="text-foreground/80">доверяют: </span>
-            <span>blockchain fond</span>
-            <span>legal hub</span>
-            <span>venture club</span>
-            <span>private banking</span>
+            <span className="text-foreground/80">Нам доверяют:</span>
+            <span>Blockchain фонд</span>
+            <span>Legal Hub</span>
+            <span>Venture Club</span>
+            <span>Private Banking</span>
           </div>
         </div>
 
@@ -93,8 +92,8 @@ export default function Hero() {
           <div className="relative z-10 rounded-[32px] border border-border/80 bg-background/90 p-10 shadow-[0_25px_65px_rgba(15,15,15,0.1)]">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-xs uppercase tracking-normal text-foreground/60">Контур</p>
-                <h3 className="text-2xl font-black text-foreground">LIVE мониторинг</h3>
+                <p className="text-xs uppercase tracking-normal text-foreground/60">Мониторинг</p>
+                <h3 className="text-2xl font-black text-foreground">Следим за репутацией</h3>
               </div>
               <span className="rounded-full border border-foreground/20 px-4 py-2 text-[11px] font-semibold uppercase tracking-normal text-foreground/70">
                 24/7
@@ -119,10 +118,10 @@ export default function Hero() {
 
             <div className="mt-10 space-y-4 rounded-2xl border border-border/60 bg-foreground px-6 py-5 text-background">
               <p className="text-xs uppercase tracking-normal text-background/70">Статус</p>
-              <p className="text-2xl font-black">Восстановление имиджа CEO</p>
+              <p className="text-2xl font-black">Восстановление имиджа</p>
               <div className="flex items-center gap-2 text-sm text-background/70">
                 <span className="h-2.5 w-2.5 rounded-full bg-primary" />
-                Escalation level • Direct media
+                Работаем со СМИ
               </div>
             </div>
           </div>
