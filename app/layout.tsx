@@ -1,23 +1,24 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Inter, Space_Grotesk } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const geist = Geist({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-geist",
+const inter = Inter({
+  subsets: ["latin", "cyrillic"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-inter",
 })
-const geistMono = Geist_Mono({
+
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-geist-mono",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-space-grotesk",
 })
 
 export const metadata: Metadata = {
-  title: "RepClean - Удаление негативной информации из интернета",
-  description: "ИИ-платформа для поиска и удаления негативной информации и компрометирующих данных из интернета",
+  title: "DataTrace | Управление репутацией",
+  description: "Агентство управления цифровой репутацией. Удаляем негатив, формируем выдачу, защищаем бренд.",
   generator: "v0.app",
   icons: {
     icon: [
@@ -45,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${geist.variable} ${geistMono.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
