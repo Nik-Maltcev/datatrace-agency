@@ -34,12 +34,12 @@ export default function Header() {
       <div className="container mx-auto px-6">
         <nav className="flex items-center justify-between gap-6 py-4">
           <Link href="/" className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-border bg-background shadow-inner">
-              <div className="h-4 w-4 rounded-full bg-primary" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-brand-black">
+              <div className="h-3 w-3 rounded-full bg-brand-accent" />
             </div>
             <div className="flex flex-col leading-none">
-              <span className="font-black text-xl text-foreground tracking-tight">datatrace</span>
-              <span className="text-[10px] uppercase tracking-normal text-foreground/60">reputation unit</span>
+              <span className="font-mono font-bold text-lg text-foreground tracking-tight">datatrace</span>
+              <span className="font-mono text-[9px] uppercase tracking-widest text-foreground/50">reputation</span>
             </div>
           </Link>
 
@@ -48,22 +48,22 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-[11px] font-semibold uppercase tracking-normal text-foreground/70 hover:text-foreground transition"
+                className="font-mono text-[11px] font-medium uppercase tracking-wider text-foreground/60 hover:text-foreground transition-colors"
               >
                 {item.label}
               </Link>
             ))}
           </div>
 
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-5">
             <Link
               href="mailto:hello@datatrace.agency"
-              className="text-[11px] font-semibold uppercase tracking-normal text-foreground/60 hover:text-foreground transition"
+              className="font-mono text-[10px] font-medium uppercase tracking-wider text-foreground/50 hover:text-foreground transition-colors"
             >
-              24/7 support
+              24/7
             </Link>
-            <button className="rounded-full border border-foreground/40 px-6 py-3 text-[11px] font-black uppercase tracking-normal text-foreground hover:border-foreground hover:-translate-y-0.5 transition-all">
-              Запросить аудит
+            <button className="rounded-full bg-brand-black px-6 py-2.5 font-mono text-[10px] font-semibold uppercase tracking-wider text-white hover:bg-brand-dark hover:-translate-y-0.5 transition-all">
+              Аудит
             </button>
           </div>
 

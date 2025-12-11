@@ -26,33 +26,34 @@ const Cases = () => {
     ]
 
     return (
-        <section id="cases" className="py-24 bg-gray-50 text-black z-10 relative">
+        <section id="cases" className="py-20 lg:py-28 bg-brand-gray text-brand-black z-10 relative">
             <div className="container mx-auto px-6">
-                <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 leading-tight max-w-4xl">
-                    Работаем в режимах кризиса, слияния, личного ребрендинга.
+                <p className="font-mono text-[10px] font-medium uppercase tracking-wider text-brand-text/50 mb-3">Кейсы</p>
+                <h2 className="font-mono text-2xl md:text-3xl font-bold mb-4 leading-tight max-w-3xl tracking-tight">
+                    Кризис, слияние, ребрендинг
                 </h2>
-                <p className="text-gray-600 mb-12">Детали кейсов под NDA, но паттерны остаются: сложные исходные условия, прозрачные KPI, ощутимый бизнес-результат.</p>
+                <p className="text-brand-text/60 mb-10 text-sm">Детали под NDA. Паттерны остаются: сложные условия, прозрачные KPI, результат.</p>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
                     {cases.map((c, i) => (
-                        <div key={i} className="bg-white p-8 rounded-2xl border border-gray-200 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all">
+                        <div key={i} className="bg-white p-6 rounded-xl border border-border flex flex-col justify-between hover:shadow-lg transition-all">
                             <div>
-                                <div className="flex justify-between text-[10px] font-bold uppercase text-gray-400 mb-6">
+                                <div className="flex justify-between font-mono text-[9px] font-medium uppercase tracking-wider text-brand-muted mb-5">
                                     <span>{c.tag}</span>
                                     <span>{c.time}</span>
                                 </div>
-                                <h3 className="text-xl font-bold mb-4 leading-snug">{c.title}</h3>
-                                <p className="text-sm text-gray-600 mb-6 leading-relaxed">{c.desc}</p>
+                                <h3 className="font-mono text-base font-semibold mb-3 leading-snug tracking-tight">{c.title}</h3>
+                                <p className="text-sm text-brand-text/60 mb-5 leading-relaxed">{c.desc}</p>
 
-                                <div className="mb-6">
-                                    <div className="text-[10px] text-gray-400 uppercase mb-2">КЛЮЧЕВЫЕ ПЛОЩАДКИ</div>
-                                    <div className="text-xs font-medium">{c.keys}</div>
+                                <div className="mb-5">
+                                    <div className="font-mono text-[9px] text-brand-muted uppercase tracking-wider mb-1.5">Площадки</div>
+                                    <div className="text-xs text-brand-text/70">{c.keys}</div>
                                 </div>
                             </div>
 
-                            <div className="bg-gray-50 border border-gray-100 text-black p-4 rounded-xl">
-                                <div className="text-[10px] text-gray-500 uppercase mb-1">РЕЗУЛЬТАТ</div>
-                                <div className="text-xs font-medium leading-relaxed">{c.result}</div>
+                            <div className="bg-brand-gray border border-border text-brand-black p-4 rounded-lg">
+                                <div className="font-mono text-[9px] text-brand-muted uppercase tracking-wider mb-1">Результат</div>
+                                <div className="text-xs text-brand-text/80 leading-relaxed">{c.result}</div>
                             </div>
                         </div>
                     ))}

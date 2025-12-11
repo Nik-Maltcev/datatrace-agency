@@ -49,55 +49,55 @@ export default function Pricing() {
     <section id="pricing" className="border-b border-border bg-background">
       <div className="container mx-auto space-y-12 px-6 py-20 lg:space-y-16 lg:py-28">
         <div className="space-y-4 text-center">
-          <p className="text-xs font-semibold uppercase tracking-normal text-foreground/60">Тарифы</p>
-          <h2 className="text-3xl font-black leading-tight text-foreground sm:text-4xl lg:text-5xl">
-            Стоимость зависит от масштаба задачи и количества площадок.
+          <p className="font-mono text-[10px] font-medium uppercase tracking-wider text-foreground/50">Тарифы</p>
+          <h2 className="font-mono text-2xl font-bold leading-tight text-foreground sm:text-3xl lg:text-4xl tracking-tight">
+            Стоимость зависит от масштаба
           </h2>
-          <p className="mx-auto max-w-2xl text-base text-foreground/70 lg:text-lg">
-            Перед началом работы проводим аудит. Подбираем инструменты и закрепляем цели в договоре.
+          <p className="mx-auto max-w-xl text-sm text-foreground/60 lg:text-base leading-relaxed">
+            Аудит перед стартом. Инструменты и цели — в договоре.
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-3">
+        <div className="grid gap-5 lg:grid-cols-3">
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`flex flex-col rounded-[32px] border border-border/80 p-8 shadow-[0_30px_80px_rgba(15,15,15,0.08)] ${
-                plan.highlighted ? "bg-foreground text-background" : "bg-background/85"
+              className={`flex flex-col rounded-xl border p-6 ${
+                plan.highlighted ? "bg-brand-black text-white border-brand-black" : "bg-white border-border"
               }`}
             >
-              <div className="space-y-3">
+              <div className="space-y-2">
                 <p
-                  className={`text-xs uppercase tracking-normal ${
-                    plan.highlighted ? "text-background/70" : "text-foreground/60"
+                  className={`font-mono text-[9px] uppercase tracking-wider ${
+                    plan.highlighted ? "text-white/50" : "text-foreground/50"
                   }`}
                 >
                   {plan.period}
                 </p>
-                <h3 className="text-2xl font-bold">{plan.name}</h3>
-                <p className="text-lg font-black">{plan.price}</p>
-                <p className={`text-sm ${plan.highlighted ? "text-background/80" : "text-foreground/75"}`}>
+                <h3 className="font-mono text-xl font-bold tracking-tight">{plan.name}</h3>
+                <p className="font-mono text-base font-semibold">{plan.price}</p>
+                <p className={`text-sm leading-relaxed ${plan.highlighted ? "text-white/70" : "text-foreground/60"}`}>
                   {plan.description}
                 </p>
               </div>
 
-              <div className="mt-8 space-y-4">
+              <div className="mt-6 space-y-3">
                 {plan.features.map((feature) => (
-                  <div key={feature} className="flex gap-3 text-sm">
-                    <Check className={`mt-0.5 h-5 w-5 flex-shrink-0 ${plan.highlighted ? "text-primary" : "text-primary"}`} />
-                    <span className={plan.highlighted ? "text-background/90" : "text-foreground/80"}>{feature}</span>
+                  <div key={feature} className="flex gap-2.5 text-sm">
+                    <Check className={`mt-0.5 h-4 w-4 flex-shrink-0 ${plan.highlighted ? "text-brand-accent" : "text-brand-accent"}`} />
+                    <span className={plan.highlighted ? "text-white/80" : "text-foreground/70"}>{feature}</span>
                   </div>
                 ))}
               </div>
 
               <button
-                className={`mt-10 rounded-full border px-6 py-3 text-[11px] font-black uppercase tracking-normal transition ${
+                className={`mt-8 rounded-full px-5 py-2.5 font-mono text-[10px] font-semibold uppercase tracking-wider transition-all hover:-translate-y-0.5 ${
                   plan.highlighted
-                    ? "border-background/40 text-background hover:border-background"
-                    : "border-foreground/40 text-foreground hover:border-foreground"
+                    ? "bg-white text-brand-black hover:shadow-lg"
+                    : "border border-border text-foreground hover:border-foreground/50"
                 }`}
               >
-                Запросить расчёт
+                Расчёт
               </button>
             </div>
           ))}

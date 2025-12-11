@@ -9,18 +9,24 @@ const config: Config = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
-                display: ['var(--font-space-grotesk)', 'Space Grotesk', 'sans-serif'],
+                sans: ['var(--font-manrope)', 'Manrope', 'system-ui', 'sans-serif'],
+                mono: ['var(--font-mono)', 'JetBrains Mono', 'Fira Code', 'monospace'],
+                display: ['var(--font-mono)', 'JetBrains Mono', 'monospace'],
             },
             colors: {
                 brand: {
-                    black: '#111827',
-                    dark: '#1F2937',
-                    gray: '#F3F4F6',
-                    white: '#FFFFFF',
-                    accent: '#2563EB',
-                    text: '#374151'
+                    black: '#0A0A0B',
+                    dark: '#18181B',
+                    gray: '#F4F4F5',
+                    white: '#FAFAFA',
+                    accent: '#3B82F6',
+                    text: '#52525B',
+                    muted: '#A1A1AA'
                 }
+            },
+            letterSpacing: {
+                'tighter': '-0.04em',
+                'tight': '-0.02em',
             },
             animation: {
                 'float': 'float 6s ease-in-out infinite',
