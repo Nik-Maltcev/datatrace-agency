@@ -18,28 +18,33 @@ const RemovalRequestModal = ({ isOpen, onClose }: RemovalRequestModalProps) => {
         links: ''
     })
 
+    const [error, setError] = useState('')
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
         setLoading(true)
+        setError('')
 
         try {
-            // Construct message for Telegram personal profile
-            const message = `🚀 Новая заявка на удаление:\n\n👤 ФИО: ${formData.name}\n📱 Телефон: ${formData.phone}\n🔗 Ссылки:\n${formData.links}`
-            const telegramUrl = `https://t.me/nikmaltcev?text=${encodeURIComponent(message)}`
+            const response = await fetch('/api/telegram', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            })
 
-            // Open Telegram with pre-filled message
-            window.open(telegramUrl, '_blank')
+            if (!response.ok) {
+                throw new Error('Ошибка отправки')
+            }
 
-            // Show success UI locally to confirm action
-            await new Promise(resolve => setTimeout(resolve, 500))
             setSuccess(true)
             setTimeout(() => {
                 setSuccess(false)
                 setFormData({ name: '', phone: '', links: '' })
                 onClose()
             }, 3000)
-        } catch (error) {
-            console.error(error)
+        } catch (err) {
+            setError('Не удалось отправить заявку. Попробуйте позже.')
+            console.error(err)
         } finally {
             setLoading(false)
         }
@@ -74,8 +79,8 @@ const RemovalRequestModal = ({ isOpen, onClose }: RemovalRequestModalProps) => {
                                 <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
                                     <Check className="w-8 h-8" />
                                 </div>
-                                <h3 className="text-xl font-bold text-black mb-2">Открываем Telegram...</h3>
-                                <p className="text-gray-600">Нажмите кнопку отправки сообщения в Telegram, чтобы передать заявку менеджеру.</p>
+                                <h3 className="text-xl font-bold text-black mb-2">Заявка отправлена!</h3>
+                                <p className="text-gray-600">Мы свяжемся с вами в ближайшее время.</p>
                             </div>
                         ) : (
                             <>
@@ -117,12 +122,16 @@ const RemovalRequestModal = ({ isOpen, onClose }: RemovalRequestModalProps) => {
                                         <p className="text-[10px] text-gray-400 mt-1">Каждая ссылка с новой строки</p>
                                     </div>
 
+                                    {error && (
+                                        <p className="text-red-500 text-sm text-center">{error}</p>
+                                    )}
+
                                     <button
                                         type="submit"
                                         disabled={loading}
                                         className="w-full bg-black text-white font-bold py-4 rounded-xl mt-4 hover:bg-gray-800 transition-colors flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                                     >
-                                        {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : "ОТПРАВИТЬ В TELEGRAM"}
+                                        {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : "ОТПРАВИТЬ ЗАЯВКУ"}
                                     </button>
                                 </form>
                             </>
