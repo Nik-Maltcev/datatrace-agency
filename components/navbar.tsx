@@ -4,7 +4,11 @@ import { useState, useEffect } from 'react'
 import { Activity, Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const Navbar = () => {
+interface NavbarProps {
+    openModal: () => void;
+}
+
+const Navbar = ({ openModal }: NavbarProps) => {
     const [isOpen, setIsOpen] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false)
 
@@ -37,7 +41,10 @@ const Navbar = () => {
                             <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-brand-accent transition-all group-hover:w-full" />
                         </a>
                     ))}
-                    <button className="ml-4 bg-brand-black text-white px-5 py-2.5 rounded-full transition-all text-[10px] font-semibold tracking-wider hover:-translate-y-0.5 hover:shadow-lg">
+                    <button
+                        onClick={openModal}
+                        className="ml-4 bg-brand-black text-white px-5 py-2.5 rounded-full transition-all text-[10px] font-semibold tracking-wider hover:-translate-y-0.5 hover:shadow-lg"
+                    >
                         АУДИТ
                     </button>
                 </div>
