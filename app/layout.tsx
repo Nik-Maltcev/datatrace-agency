@@ -1,7 +1,9 @@
 import type React from "react"
+import { Suspense } from "react"
 import type { Metadata } from "next"
 import { Manrope, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { YandexMetrika } from "@/components/yandex-metrika"
 import "./globals.css"
 
 const manrope = Manrope({
@@ -49,6 +51,9 @@ export default function RootLayout({
       <body className={`${manrope.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
         {children}
         <Analytics />
+        <Suspense fallback={null}>
+          <YandexMetrika />
+        </Suspense>
       </body>
     </html>
   )
