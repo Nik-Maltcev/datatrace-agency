@@ -1,3 +1,6 @@
+"use client"
+
+import { useState } from "react"
 import Navbar from "@/components/navbar"
 import Background from "@/components/background"
 import HeroNew from "@/components/hero-new"
@@ -10,14 +13,18 @@ import Cases from "@/components/cases"
 import FAQNew from "@/components/faq-new"
 import CTA from "@/components/cta"
 import FooterNew from "@/components/footer-new"
+import RemovalRequestModal from "@/components/removal-request-modal"
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const openModal = () => setIsModalOpen(true)
+
   return (
     <div className="bg-white min-h-screen text-brand-black selection:bg-black selection:text-white">
       <Background />
-      <Navbar />
+      <Navbar openModal={openModal} />
       <main>
-        <HeroNew />
+        <HeroNew openModal={openModal} />
         <ServicesNew />
         <Team />
         <Process />
@@ -25,9 +32,10 @@ export default function Home() {
         <ClientPath />
         <Cases />
         <FAQNew />
-        <CTA />
+        <CTA openModal={openModal} />
       </main>
       <FooterNew />
+      <RemovalRequestModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   )
 }

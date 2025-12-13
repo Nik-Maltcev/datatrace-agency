@@ -10,7 +10,18 @@ const StatItem = ({ number, label }: { number: string, label: string }) => (
     </div>
 )
 
-const HeroNew = () => {
+interface HeroNewProps {
+    openModal: () => void;
+}
+
+const HeroNew = ({ openModal }: HeroNewProps) => {
+    const scrollToCases = () => {
+        const casesSection = document.getElementById('cases');
+        if (casesSection) {
+            casesSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <section className="relative min-h-screen w-full flex flex-col justify-center pt-20 overflow-hidden bg-transparent">
 
@@ -54,6 +65,7 @@ const HeroNew = () => {
                         className="flex flex-wrap gap-4"
                     >
                         <motion.button
+                            onClick={openModal}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className="bg-black text-white px-8 py-4 rounded-full font-bold text-sm md:text-base flex items-center gap-2 group shadow-lg hover:shadow-xl transition-all z-20"
@@ -62,6 +74,7 @@ const HeroNew = () => {
                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </motion.button>
                         <motion.button
+                            onClick={scrollToCases}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className="border border-gray-300 text-black bg-white/50 backdrop-blur-sm px-8 py-4 rounded-full font-bold text-sm md:text-base hover:bg-white transition-colors z-20"
